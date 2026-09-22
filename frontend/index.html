@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Games - TechSolutions</title>
+    <!-- Vinculación del CSS con la ruta correcta -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importación de Axios (¡muy importante no borrarlo!) -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>🎮 Portal de Videojuegos y Desarrolladores</h1>
+        <p>Documentación y consumo de la API de TechSolutions</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Gestión de Desarrolladores</h2>
+            <form id="dev-form">
+                <input type="text" id="dev-name" placeholder="Nombre del desarrollador" required>
+                <input type="text" id="dev-country" placeholder="País" required>
+                <button type="submit">Añadir Desarrollador</button>
+            </form>
+            <div id="dev-list" class="list-container"></div>
+        </section>
+
+        <section class="card">
+            <h2>Gestión de Videojuegos</h2>
+            <form id="game-form">
+                <input type="text" id="game-title" placeholder="Título del juego" required>
+                <input type="text" id="game-genre" placeholder="Género">
+                <input type="number" id="game-year" placeholder="Año de lanzamiento">
+                <select id="game-dev-id" required>
+                    <option value="" disabled selected>Selecciona un desarrollador...</option>
+                </select>
+                <button type="submit">Añadir Videojuego</button>
+            </form>
+            <div id="game-list" class="list-container"></div>
+        </section>
+    </main>
+
+    <!-- Vinculación de tu JavaScript con la ruta correcta al final del body -->
+    <script src="js/app.js"></script>
+</body>
+</html>
